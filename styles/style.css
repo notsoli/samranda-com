@@ -1,117 +1,117 @@
 /* variables and fonts */
 
 :root {
-    --background: #3D6B38;
-    --background-light: #5d9b56;
-    --background-transparent: #3d6b3800;
-    --text: #F8F3E8;
+  --background: #3d6b38;
+  --background-light: #5d9b56;
+  --background-transparent: #3d6b3800;
+  --text: #f8f3e8;
 }
 
 @font-face {
-    font-family: "Nyght";
-    src: url("../fonts/NyghtSerif-Regular.woff2") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Nyght";
+  src: url("../fonts/NyghtSerif-Regular.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-  
+
 @font-face {
-    font-family: "Nyght";
-    src: url("../fonts/NyghtSerif-RegularItalic.woff2") format("truetype");
-    font-weight: normal;
-    font-style: italic;
+  font-family: "Nyght";
+  src: url("../fonts/NyghtSerif-RegularItalic.woff2") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
 
 /* general styles */
 
 h1, h2, h3, p {
-    font-family: "Nyght";
+  font-family: "Nyght";
 }
 
 html, body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    background-color: var(--background);
-    color: var(--text);
-    position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--text);
+  position: relative;
 }
 
 #container {
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(20px, 4vw, 30px);
-    max-width: 800px;
-    margin: 10px 30px;
-    gap: 8rem;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(20px, 4vw, 30px);
+  max-width: 800px;
+  margin: 10px 30px;
+  gap: 8rem;
 }
 
 /* header */
 
 #title {
-    font-size: clamp(30px, 21vw, 180px);
-    margin-bottom: 8rem;
-    text-wrap: nowrap;
-    letter-spacing: -1vw;
+  font-size: clamp(30px, 21vw, 180px);
+  margin-bottom: 8rem;
+  text-wrap: nowrap;
+  letter-spacing: -1vw;
 }
 
 #subtitle {
-    font-size: clamp(10px, 4vw, 30px);
-    display: flex;
-    justify-content: space-between;
+  font-size: clamp(10px, 4vw, 30px);
+  display: flex;
+  justify-content: space-between;
 }
 
 /* projects */
 
 #projects {
-    line-height: 2;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
+  line-height: 2;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
 
 .project {
-    font-style: italic;
-    text-decoration: none;
-    color: var(--text);
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 3px 5px;
+  font-style: italic;
+  text-decoration: none;
+  color: var(--text);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 3px 5px;
 }
 
-.project>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: clamp(100px, 20vw, 200px);
-    z-index: -1;
-    opacity: 0;
-    transition: ease-in-out 0.6s;
-    transition-property: width, opacity;
-    transform: translate(-50%, -50%);
+.project > picture, .project > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(100px, 20vw, 200px);
+  z-index: -1;
+  opacity: 0;
+  transition: ease-in-out 0.6s;
+  transition-property: width, opacity;
+  transform: translate(-50%, -50%);
 }
 
 .project:hover, .project.hover {
-    background-color: var(--background-light);
+  background-color: var(--background-light);
 }
 
-.project:hover>img, .project.hover>img {
-    opacity: 1 !important; /* sorry */
-    width: clamp(150px, 30vw, 300px);
-    z-index: 1;
+.project:hover > picture, .project.hover > picture {
+  opacity: 1 !important; /* sorry */
+  width: clamp(150px, 30vw, 300px);
+  z-index: 1;
 }
 
 #socials, #buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 #socials img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
