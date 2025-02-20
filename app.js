@@ -9,7 +9,6 @@ function init() {
   images = document.querySelectorAll(".project>picture");
   speeds = new Map();
 
-  // Wait for images to load before initializing
   Promise.all(Array.from(images).map(img => {
     return new Promise(resolve => {
       if (img.querySelector('img').complete) {
@@ -30,22 +29,23 @@ function init() {
 
 function initImage(img) {
   const project = img.parentElement;
-  const inner = img.querySelector('img'); // Get the actual img element
+  const inner = img.querySelector('img');
+
+  // Keep the original vertical position from the document layout
   let y_pos = project.getBoundingClientRect().y +
     document.documentElement.scrollTop;
+  y_pos += (Math.random() * 50) - 25; // Small random vertical offset
 
   x_pos = (Math.round(Math.random()))
     ? -inner.offsetWidth / 2
     : window.innerWidth + inner.offsetWidth / 2;
-  y_pos += (Math.random() * 50) - 25;
 
   img.style.left = x_pos + "px";
   img.style.top = y_pos + "px";
 
   const x_spd = ((Math.round(Math.random()) * 2) - 1) *
     ((Math.random() * 0.5) + 0.5);
-  const y_spd = ((Math.random() * 0.4) - 0.2) * x_spd;
-  speeds.set(img, { x: x_spd, y: y_spd });
+  speeds.set(img, { x: x_spd }); // Only store horizontal speed
 }
 
 function render() {
@@ -53,26 +53,22 @@ function render() {
 
   for (const img of images) {
     const speed = speeds.get(img);
-    const inner = img.querySelector('img'); // Get the actual img element
+    const inner = img.querySelector('img');
 
     let x = parseFloat(img.style.left);
-    let y = parseFloat(img.style.top);
 
-    // Update position
+    // Only update horizontal position
     x += speed.x;
-    y += speed.y;
 
-    // Wrap horizontally
+    // Bounce off horizontal edges
     const width = inner.offsetWidth;
-    if (x < -width) {
-      x = window.innerWidth;
-    } else if (x > window.innerWidth) {
-      x = -width;
+    if (x < 0 || x > window.innerWidth - width) {
+      speed.x = -speed.x; // Reverse horizontal direction
+      x = x < 0 ? 0 : window.innerWidth - width; // Prevent sticking to edges
     }
 
-    // Apply new position
+    // Only update left position, keeping original top position
     img.style.left = x + "px";
-    img.style.top = y + "px";
   }
 
   if (frame % 240 == 0) {
