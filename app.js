@@ -2,6 +2,9 @@ let images, speeds;
 let frame, highlight;
 window.onload = init;
 
+const LEFT_BOUND = 100;
+const RIGHT_BOUND = 100;
+
 function init() {
   frame = 0;
   highlight = Math.floor(Math.random() * 5);
@@ -9,15 +12,17 @@ function init() {
   images = document.querySelectorAll(".project>picture");
   speeds = new Map();
 
-  Promise.all(Array.from(images).map(img => {
-    return new Promise(resolve => {
-      if (img.querySelector('img').complete) {
-        resolve();
-      } else {
-        img.querySelector('img').onload = resolve;
-      }
-    });
-  })).then(() => {
+  Promise.all(
+    Array.from(images).map((img) => {
+      return new Promise((resolve) => {
+        if (img.querySelector("img").complete) {
+          resolve();
+        } else {
+          img.querySelector("img").onload = resolve;
+        }
+      });
+    }),
+  ).then(() => {
     for (const img of images) {
       initImage(img);
       img.style.left = (Math.random() * window.innerWidth) + "px";
@@ -29,23 +34,16 @@ function init() {
 
 function initImage(img) {
   const project = img.parentElement;
-  const inner = img.querySelector('img');
 
-  // Keep the original vertical position from the document layout
   let y_pos = project.getBoundingClientRect().y +
     document.documentElement.scrollTop;
-  y_pos += (Math.random() * 50) - 25; // Small random vertical offset
+  y_pos += (Math.random() * 50) - 25;
 
-  x_pos = (Math.round(Math.random()))
-    ? -inner.offsetWidth / 2
-    : window.innerWidth + inner.offsetWidth / 2;
-
-  img.style.left = x_pos + "px";
   img.style.top = y_pos + "px";
 
   const x_spd = ((Math.round(Math.random()) * 2) - 1) *
     ((Math.random() * 0.5) + 0.5);
-  speeds.set(img, { x: x_spd }); // Only store horizontal speed
+  speeds.set(img, { x: x_spd });
 }
 
 function render() {
@@ -53,31 +51,30 @@ function render() {
 
   for (const img of images) {
     const speed = speeds.get(img);
-    const inner = img.querySelector('img');
 
     let x = parseFloat(img.style.left);
-
-    // Only update horizontal position
     x += speed.x;
 
-    // Bounce off horizontal edges
-    const width = inner.offsetWidth;
-    if (x < 0 || x > window.innerWidth - width) {
-      speed.x = -speed.x; // Reverse horizontal direction
-      x = x < 0 ? 0 : window.innerWidth - width; // Prevent sticking to edges
+    // Use the manual boundary offsets
+    if (x <= LEFT_BOUND) {
+      speed.x = Math.abs(speed.x);
+      x = LEFT_BOUND;
+    } else if (x >= window.innerWidth - RIGHT_BOUND) {
+      speed.x = -Math.abs(speed.x);
+      x = window.innerWidth - RIGHT_BOUND;
     }
 
-    // Only update left position, keeping original top position
     img.style.left = x + "px";
   }
 
   if (frame % 240 == 0) {
-    const project = images[highlight].parentElement;
-    project.classList.add("hover");
+    const picture = images[highlight];
+    const projectLink = picture.parentElement;
+    projectLink.classList.add("hover");
     setTimeout(() => {
-      project.classList.remove("hover");
+      projectLink.classList.remove("hover");
     }, 3000);
-    highlight = Math.floor(Math.random() * 17);
+    highlight = (highlight + Math.floor(Math.random() * 3) + 1) % images.length;
   }
 
   requestAnimationFrame(render);
