@@ -6,7 +6,7 @@ function init() {
   frame = 0;
   highlight = Math.floor(Math.random() * 5);
 
-  images = document.querySelectorAll(".project>img");
+  images = document.querySelectorAll(".project>picture");
   speeds = new Map();
   for (const img of images) {
     initImage(img);
@@ -18,12 +18,13 @@ function init() {
 
 function initImage(img) {
   const project = img.parentElement;
+  const inner = img;
   let y_pos = project.getBoundingClientRect().y +
     document.documentElement.scrollTop;
 
   x_pos = (Math.round(Math.random()))
-    ? -img.width / 2
-    : window.innerWidth + img.width / 2;
+    ? -inner.width / 2
+    : window.innerWidth + inner.width / 2;
   y_pos += (Math.random() * 50) - 25;
 
   img.style.left = x_pos + "px";
@@ -40,6 +41,7 @@ function render() {
 
   for (const img of images) {
     const speed = speeds.get(img);
+    const inner = img;
 
     const x = parseFloat(img.style.left);
     const y = parseFloat(img.style.top);
@@ -47,7 +49,7 @@ function render() {
     img.style.left = (x + speed.x) + "px";
     img.style.top = (y + speed.y) + "px";
 
-    if (x < -img.width / 2 || x > window.innerWidth + img.width / 2) {
+    if (x < -inner.width / 2 || x > window.innerWidth + inner.width / 2) {
       initImage(img);
     }
   }

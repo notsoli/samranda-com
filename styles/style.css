@@ -82,7 +82,7 @@ body {
   padding: 3px 5px;
 }
 
-.project > picture, .project > img {
+.project > picture {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,11 +94,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.project > picture > * {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .project:hover, .project.hover {
   background-color: var(--background-light);
 }
 
-.project:hover > picture, .project.hover > picture {
+.project:hover > picture {
   opacity: 1 !important; /* sorry */
   width: clamp(150px, 30vw, 300px);
   z-index: 1;
