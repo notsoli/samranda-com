@@ -1,65 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam Randa</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <script src="app.js"></script>
-</head>
-<body>
-    <div id="container">
-        <div id="header">
-            <div id="subtitle">
-                <h2>Web platform engineer</h2>
-                <h2>Creative hobbyist</h2>
-            </div>
-            <h1 id="title">Sam Randa</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sam Randa</title>
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="icons/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="icons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div class="subtitle">
+                    <h2>Web platform engineer</h2>
+                    <h2>Creative hobbyist</h2>
+                </div>
+                <h1 id="title">Sam Randa</h1>
+                <div class="subtitle">
+                    <a href="files/sr-resume.pdf"><h2>View my resume</h2></a>
+                    <a href="mailto:hi@samranda.com"
+                        ><h2>Send me a message</h2></a
+                    >
+                </div>
+            </header>
+            <section id="socials">
+                <a href="https://www.github.com/notsoli" target="_blank"
+                    ><img src="images/socials/github.png" alt="The GitHub logo"
+                /></a>
+                <a href="https://www.linkedin.com/in/sam-randa/" target="_blank"
+                    ><img
+                        src="images/socials/linkedin.png"
+                        alt="The LinkedIn logo"
+                /></a>
+                <a href="https://www.youtube.com/@samranda" target="_blank"
+                    ><img
+                        src="images/socials/youtube.png"
+                        alt="The YouTube logo"
+                /></a>
+                <a href="https://www.instagram.com/linen.sam/" target="_blank"
+                    ><img
+                        src="images/socials/instagram.png"
+                        alt="The Instagram logo"
+                /></a>
+            </section>
+            <section id="projects">
+                <p>
+                    I am a web platform engineer and creative technologist who
+                    builds expressive, unusual, graphics-driven interfaces. I
+                    recently graduated from Worcester Polytechnic Institute with
+                    a B.S. in Computer Science, where I explored how modern web
+                    technologies can power
+                    <a href="https://mint.photo" class="project"
+                        >creative tools<img
+                            src="images/projects/mint.jpg"
+                            alt="" /></a
+                    >,
+                    <a href="https://4099.samranda.com" class="project"
+                        >visualizations<img
+                            src="images/projects/vants.jpg"
+                            alt="" /></a
+                    >, and
+                    <a
+                        href="https://www.youtube.com/watch?v=d1Qo8Y68fAE"
+                        class="project"
+                        >interactive experiences<img
+                            src="images/projects/pixel-sorting.jpg"
+                            alt="" /></a
+                    >.
+                </p>
+                <p>
+                    Much of my work blends graphics and interaction. My
+                    favorites are
+                    <a href="https://mint.photo" class="project"
+                        >Mint<img src="images/projects/mint-2.jpg" alt="" /></a
+                    >, a powerful digital compositing and photo editing tool,
+                    <a
+                        href="https://notsoli.github.io/cocktail-composite/"
+                        class="project"
+                        >Cocktail Composite<img
+                            src="images/projects/cocktail-composite.jpg"
+                            alt="" /></a
+                    >, a declarative node-based shader compositor, and
+                    <a class="project"
+                        >tile.music<img
+                            src="images/projects/tile-music.jpg"
+                            alt="" /></a
+                    >, a data-driven visualization of music listening habits.
+                    I’m driven by how people can shape visuals through the web,
+                    using intuitive interfaces and
+                    <a
+                        href="https://github.com/notsoli/devolute"
+                        class="project"
+                        >libraries<img
+                            src="images/projects/devolute.jpg"
+                            alt=""
+                    /></a>
+                    built on modern platforms like WebGPU and WebGL.
+                </p>
+                <p>
+                    I care deeply about design and visual culture, extending
+                    beyond software. I work on
+                    <a
+                        href="https://www.instagram.com/p/C5ThB8drbLx"
+                        class="project"
+                        >styling<img src="images/projects/styling.jpg" alt=""
+                    /></a>
+                    and
+                    <a class="project"
+                        >upcycling<img
+                            src="images/projects/upcycling.jpg"
+                            alt=""
+                    /></a>
+                    projects, help build
+                    <a
+                        href="https://discord.com/invite/malefashionadvice"
+                        class="project"
+                        >online fashion communities<img
+                            src="images/projects/mfad.jpg"
+                            alt="" /></a
+                    >, design and curate
+                    <a
+                        href="https://osu.ppy.sh/beatmapsets/1317683"
+                        class="project"
+                        >levels for rhythm games<img
+                            src="images/projects/romanticist.jpg"
+                            alt="" /></a
+                    >, and host and perform in
+                    <a class="project"
+                        >DJ/VJ shows<img src="images/projects/dj-vj.jpg" alt=""
+                    /></a>
+                    at WPI. These experiences inform how I design tools that
+                    balance precision, creativity, and aesthetic expression.
+                </p>
+                <p>
+                    Beyond development, I enjoy studying
+                    <a href="files/the-role-of-rail.pdf" class="project"
+                        >cities<img src="images/projects/inner-belt.jpg" alt=""
+                    /></a>
+                    and
+                    <a class="project"
+                        >transportation<img
+                            src="images/projects/transit.jpg"
+                            alt=""
+                    /></a>
+                    systems, exploring how activism and design shape public
+                    infrastructure. I’ve also collaborated with nonprofits and
+                    community organizations on marketing and
+                    <a
+                        href="files/building-positive-culture-change.pdf"
+                        class="project"
+                        >social science research<img
+                            src="images/projects/social-science.jpg"
+                            alt="" /></a
+                    >.
+                </p>
+                <p>
+                    I previously worked on security research for AI-powered
+                    healthcare tools at Doximity. Right now, I work with
+                    <a href="https://mosaiq.dev" class="project"
+                        >Mosaiq Software<img
+                            src="images/projects/mosaiq.jpg"
+                            alt=""
+                    /></a>
+                    building
+                    <a href="https://terrazzo.mosaiq.dev" class="project"
+                        >platforms<img
+                            src="images/projects/terrazzo.jpg"
+                            alt="" /></a
+                    >,
+                    <a href="https://carddomain.mosaiq.dev" class="project"
+                        >engines<img
+                            src="images/projects/card-domain.jpg"
+                            alt="" /></a
+                    >, and tools, but I am always looking for full-time
+                    opportunities.
+                </p>
+                <p>
+                    Finally, I
+                    <a class="project"
+                        >pour lattes<img src="images/projects/crust.jpg" alt=""
+                    /></a>
+                    sometimes.
+                </p>
+            </section>
+            <section id="buttons">
+                <a href="https://samranda.com"
+                    ><img src="images/buttons/sam.webp" alt=""
+                /></a>
+                <a href="https://hayl.in"
+                    ><img src="images/buttons/haylin.webp" alt=""
+                /></a>
+                <a href="https://giannirosato.com"
+                    ><img src="images/buttons/gb82_88x31.webp" alt=""
+                /></a>
+                <a href="https://jordane.day/"
+                    ><img src="images/buttons/jordan.gif" alt=""
+                /></a>
+            </section>
         </div>
-        <div id="projects">
-            <p>
-                I am a recent graduate of Worcester Polytechnic Institute studying computer science. I tend to focus on highly stylized
-                2D graphics, creating <a href="https://youtu.be/znCBzCTA-RM" class="project">data-powered<img src="images/projects/data-vis.jpg" alt=""></a> or <a href="https://4099.samranda.com/reactiondiffusion/" class="project">generative<img src="images/projects/generative-vis.jpg" alt=""></a>
-                visualizations and the <a href="https://github.com/notsoli/cocktail-composite" class="project">tools<img src="images/projects/tools.jpg" alt=""></a> used to make them.
-                Some of these projects explore <a href="" class="project">linear algebra<img src="images/projects/linear-algebra.jpg" alt=""></a>,
-                <a href="https://newtonsfractal.samranda.com/" class="project">fractals<img src="images/projects/fractal.jpg" alt=""></a>, and <a href="https://4099.samranda.com/vants/" class="project">compute shader simulations<img src="images/projects/compute-shader.jpg" alt=""></a>,
-                with others branching into <a href="https://www.youtube.com/watch?v=d1Qo8Y68fAE" class="project">multi-media<img src="images/projects/multi-media.jpg" alt=""></a>.
-            </p>
-            <p>
-                My work in graphics is fueled by a overwhelming love for design and visual rhetoric that touches almost every area
-                of my life. Fashion forms the bulk of my creative output, influencing my participation in
-                <a href="http://discord.gg/malefashionadvice" class="project">online fashion communities<img src="images/projects/online-communities.jpg" alt=""></a> and passion for
-                <a href="https://www.instagram.com/p/C5ThB8drbLx4EnoH9Ubq5soxOE9Bv97LNds4nY0/?img_index=1" class="project">experimental styling<img src="images/projects/styling.jpg" alt=""></a>. I do my best to demystify designer clothing and share ways of
-                obtaining it affordably, aided by thrifting and <a href="" class="project">upcycling<img src="images/projects/upcycling.jpeg" alt=""></a>
-                projects. Occasionally, programming, fashion, and design come together in <a href="https://www.youtube.com/watch?v=oevmzA48iSA" class="project">visual storytelling<img src="images/projects/visual-storytelling.jpg" alt=""></a>. 
-            </p>
-            <p>
-                In addition to hobbyist <a href="https://github.com/TheDyingSun/NeoAsteroids" class="project">game development<img src="images/projects/game-dev.jpg" alt=""></a>, I draw from my experience with
-                <a href="https://osu.ppy.sh/beatmapsets/1317683" class="project">level design<img src="images/projects/level-design.jpg" alt=""></a>, content curation, and quality assurance, navigating the complex content
-                approval systems that exist within both academia and community game projects. I spend time thinking about
-                <a href="https://metrodreamin.com/view/WWdKeExkRzFaZVJSZHpKaUt5VHM0cEl2bHlZMnwx" class="project">public transportation<img src="images/projects/transit.jpg" alt=""></a> and <a href="files/Sam Randa - The Role of Rail in Highway Revolts.pdf" class="project">urban history<img src="images/projects/urban-history.jpg" alt=""></a>, exploring how
-                patterns of activism help shape the development of urban amenities. I have worked with non-profits and municipal
-                organizations doing web marketing and <a href="files/Building Positive Culture Change in Merton - Final Report.pdf" class="project">social science research<img src="images/projects/social-science.jpg" alt=""></a>. Coming from a privileged
-                upbringing, I write about family, queerness, and the upper-middle class. Finally, I
-                <a href="https://crustbakeshop.com/" class="project">pour lattes<img src="images/projects/latte.jpeg" alt=""></a> sometimes.
-            </p>
-        </div>
-        <div id="socials">
-            <a href="https://github.com/notsoli"><img src="images/socials/github.png" alt=""></a>
-            <a href="https://www.instagram.com/linen.sam/"><img src="images/socials/instagram.png" alt=""></a>
-            <a href="https://www.youtube.com/@samranda"><img src="images/socials/youtube.png" alt=""></a>
-        </div>
-        <div id="buttons">
-            <a href="https://samranda.com"><img src="images/buttons/sam.webp" alt=""></a>
-            <a href="https://hayl.in"><img src="images/buttons/haylin.webp" alt=""></a>
-            <a href="https://giannirosato.com"><img src="images/buttons/gb82_88x31.webp" alt=""></a>
-            <a href="https://jordane.day/"><img src="images/buttons/jordan.gif" alt=""></a>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

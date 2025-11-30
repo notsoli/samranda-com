@@ -1,10 +1,10 @@
 /* variables and fonts */
 
 :root {
-    --background: #3D6B38;
+    --background: #3d6b38;
     --background-light: #5d9b56;
     --background-transparent: #3d6b3800;
-    --text: #F8F3E8;
+    --text: #f8f3e8;
 }
 
 @font-face {
@@ -13,7 +13,7 @@
     font-weight: normal;
     font-style: normal;
 }
-  
+
 @font-face {
     font-family: "Nyght";
     src: url("../fonts/NyghtSerif-RegularItalic.woff2") format("truetype");
@@ -23,12 +23,16 @@
 
 /* general styles */
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
     font-family: "Nyght";
 }
 
-html, body {
-    overflow-x: hidden;
+html,
+body {
+    overflow-x: clip;
 }
 
 body {
@@ -39,25 +43,40 @@ body {
     position: relative;
 }
 
+a {
+    font-style: italic;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
 #container {
     display: flex;
     flex-direction: column;
     font-size: clamp(20px, 4vw, 30px);
     max-width: 800px;
     margin: 10px 30px;
-    gap: 8rem;
+    gap: 4rem;
 }
 
 /* header */
 
-#title {
-    font-size: clamp(30px, 21vw, 180px);
-    margin-bottom: 8rem;
-    text-wrap: nowrap;
-    letter-spacing: -1vw;
+header {
+    display: flex;
+    flex-direction: column;
 }
 
-#subtitle {
+#title {
+    font-size: clamp(30px, 21vw, 180px);
+    text-wrap: nowrap;
+    letter-spacing: -1vw;
+    margin-bottom: -1rem;
+}
+
+.subtitle {
     font-size: clamp(10px, 4vw, 30px);
     display: flex;
     justify-content: space-between;
@@ -73,16 +92,7 @@ body {
     gap: 8rem;
 }
 
-.project {
-    font-style: italic;
-    text-decoration: none;
-    color: var(--text);
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 3px 5px;
-}
-
-.project>img {
+.project > img {
     position: absolute;
     top: 0;
     left: 0;
@@ -94,21 +104,29 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.project:hover, .project.hover {
+a:hover,
+.project.hover {
     background-color: var(--background-light);
 }
 
-.project:hover>img, .project.hover>img {
+.project:hover > img,
+.project.hover > img {
     opacity: 1 !important; /* sorry */
     width: clamp(150px, 30vw, 300px);
     z-index: 1;
 }
 
-#socials, #buttons {
+#socials,
+#buttons {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+#socials a:hover,
+#buttons a:hover {
+    background-color: transparent;
 }
 
 #socials img {
