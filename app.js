@@ -3,6 +3,8 @@ let frame, highlight;
 window.onload = init;
 
 function init() {
+    document.documentElement.classList.remove("no-js");
+
     frame = 0;
     highlight = Math.floor(Math.random() * 5);
 
@@ -11,7 +13,6 @@ function init() {
     for (const img of images) {
         initImage(img);
         img.style.left = Math.random() * window.innerWidth + "px";
-        img.style.opacity = 0.2;
     }
     requestAnimationFrame(render);
 }
