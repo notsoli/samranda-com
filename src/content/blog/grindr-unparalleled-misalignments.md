@@ -1,6 +1,6 @@
 ---
 title: 'I Have To Be the Quirkiest Guy on Grindr'
-description: 'An adventure in data scraping, filtering, and dating app wordplay'
+description: 'An adventure in data scraping, filtering, and dating app wordplay. Caution: this post contains discussions of hookup apps and sexual euphemisms.'
 pubDate: 'Feb 19 2026'
 heroImage: '../images/grindr-unparalleled-misalignments/hero.jpg'
 ---
@@ -15,7 +15,7 @@ Unlike Unparalleled Misalignments, I simply tolerate Grindr. For those uninitiat
 
 Grindr is an [actively hostile platform](https://www.vox.com/culture/479175/is-grindr-dead) in both its design and use. Unlike dating apps like Tinder, Grindr is organized not by an invisible algorithm, but by other users' spatial proximity--the "grid" is simply an ordered list of users closest to you. In their profile, users are given slots for a handful of images and personal attributes, as well as a profile username.
 
-Users can filter this list by personal preferences, such as age, body type, or inclusion of photos in their profile. But, importantly, these preferences are not mutual. Users are not obligated to provide any information, even photos, about themselves in their profile, any user can view your profile or send likes and messages unless manually blocked or hidden.
+Users can filter this list by personal preferences, such as age, body type, or inclusion of photos in their profile. But, importantly, these preferences are not mutual. Users are not obligated to provide any information, even photos, about themselves in their profile, and any user can view your profile or send likes and messages unless manually blocked or hidden.
 
 This quality points towards the need for many Grindr users to find other ways to limit who chooses to interact with them, and for what reasons. Grindr provides a short profile description, but users are notorious for ignoring directly-stated preferences, or choosing not to read them entirely. This is a serious issue for those most comfortable with sexual intimacy following some amount of familiarity. Or, a little chat, at the very least.
 
@@ -26,7 +26,7 @@ My method of choice is to be a little odd. It's not terribly different from how 
 
 ![My Grindr profile](../images/grindr-unparalleled-misalignments/profile.jpg)
 
-This is what made me return to Unparalleled Misalignments--fun, short pieces of wordplay, almost puzzle-like. They're hard to understand unless you know their rules, becoming unintentional conversation starters. The problem is the pesky 15-character Grindr username cap. Unparalleled Misalignments frequently contain multiple words on each sides separated by a four-character delimiter: ` // `. This makes it exceedingly hard to force them into something suitable for Grindr.
+This is what made me return to Unparalleled Misalignments--fun, short pieces of wordplay, almost puzzle-like. They're hard to understand unless you know their rules, becoming unintentional conversation starters. The problem is the pesky 15-character Grindr username cap. Unparalleled Misalignments frequently contain multiple words on each side, separated by a four-character delimiter: ` // `. This makes it exceedingly hard to force them into something suitable for Grindr.
 
 Though, some of these problems have pretty obvious solutions: spaces can be substituted by `PascalCase`, and the lengthy delimiter can be replaced by a simple `/`. For a time, I did this manually, combing through the list until I found one short enough to mangle into something usable. But, this is a trivially simple system to automate.
 
