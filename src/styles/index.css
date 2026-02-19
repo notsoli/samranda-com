@@ -1,36 +1,8 @@
-/* variables and fonts */
-
-:root {
-    --background: #3d6b38;
-    --background-light: #5d9b56;
-    --background-transparent: #3d6b3800;
-    --text: #f8f3e8;
-    font-family: "Nyght", serif;
-}
-
-@font-face {
-    font-family: "Nyght";
-    src: url("../fonts/NyghtSerif-Regular.woff2") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Nyght";
-    src: url("../fonts/NyghtSerif-RegularItalic.woff2") format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-/* general styles */
-
 html {
     overflow-x: clip;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--text);
     overflow-x: clip;
     position: relative;
 }
@@ -44,7 +16,8 @@ a {
     border-radius: 5px;
     padding: 3px 5px;
 
-    &:hover {
+    &:hover,
+    &.hover {
         background-color: var(--background-light);
     }
 }
@@ -82,7 +55,8 @@ header {
     gap: 20px;
     flex-wrap: wrap;
 
-    a:hover {
+    a:hover,
+    a.hover {
         background-color: transparent;
     }
 }
@@ -118,7 +92,8 @@ header {
         }
     }
 
-    &:hover > img {
+    &:hover > img,
+    &.hover > img {
         opacity: 1;
         width: clamp(150px, 30vw, 300px);
         z-index: 1;

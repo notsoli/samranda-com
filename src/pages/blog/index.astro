@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Blog from "../../layouts/Blog.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Blog title="Sam Randa • Blog" description="Sam Randa's Blog">
+    <ul id="previews">
+        {
+            posts.map((post) => (
+                <li>
+                    <a href={`/blog/${post.id}/`}>
+                        {post.data.heroImage && (
+                            <Image src={post.data.heroImage} alt="" />
+                        )}
+                        <h2 class="title">{post.data.title}</h2>
+                        <p class="date">
+                            <FormattedDate date={post.data.pubDate} />
+                        </p>
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</Blog>

@@ -1,11 +1,14 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import "../styles/index.css";
+---
+
 <!doctype html>
 <html lang="en" class="no-js">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sam Randa</title>
-        <link rel="stylesheet" href="styles/reset.css" />
-        <link rel="stylesheet" href="styles/style.css" />
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -24,7 +27,7 @@
             href="icons/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <script src="app.js"></script>
+        <script src="../scripts/app.js"></script>
     </head>
     <body>
         <div id="container">
@@ -36,30 +39,40 @@
                 <h1 id="title">Sam Randa</h1>
                 <div class="subtitle">
                     <a href="files/sr-resume.pdf"><h2>View my resume</h2></a>
-                    <a href="mailto:hi@samranda.com"
-                        ><h2>Send me a message</h2></a
-                    >
+                    <a href="/blog"><h2>Read my blog</h2></a>
                 </div>
             </header>
             <section id="socials">
-                <a href="https://www.github.com/notsoli" target="_blank"
-                    ><img src="images/socials/github.png" alt="The GitHub logo"
-                /></a>
+                <a href="https://www.github.com/notsoli" target="_blank">
+                    <img
+                        src="images/socials/github.png"
+                        alt="The GitHub logo"
+                    />
+                </a>
                 <a href="https://www.linkedin.com/in/sam-randa/" target="_blank"
                     ><img
                         src="images/socials/linkedin.png"
                         alt="The LinkedIn logo"
-                /></a>
+                    /></a
+                >
                 <a href="https://www.youtube.com/@samranda" target="_blank"
                     ><img
                         src="images/socials/youtube.png"
                         alt="The YouTube logo"
-                /></a>
+                    /></a
+                >
                 <a href="https://www.instagram.com/linen.sam/" target="_blank"
                     ><img
                         src="images/socials/instagram.png"
                         alt="The Instagram logo"
-                /></a>
+                    /></a
+                >
+                <a href="mailto:mail@samranda.com" target="_blank"
+                    ><img
+                        src="images/socials/email.png"
+                        alt="Mail Envelope Icon"
+                    /></a
+                >
             </section>
             <section id="projects">
                 <p>
@@ -71,19 +84,22 @@
                     <a href="https://mint.photo" class="project"
                         >creative tools<img
                             src="images/projects/mint.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >,
                     <a href="https://4099.samranda.com" class="project"
                         >visualizations<img
                             src="images/projects/vants.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >, and
                     <a
                         href="https://www.youtube.com/watch?v=d1Qo8Y68fAE"
                         class="project"
                         >interactive experiences<img
                             src="images/projects/pixel-sorting.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >.
                 </p>
                 <p>
@@ -97,12 +113,14 @@
                         class="project"
                         >Cocktail Composite<img
                             src="images/projects/cocktail-composite.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >, a declarative node-based shader compositor, and
                     <a class="project"
                         >tile.music<img
                             src="images/projects/tile-music.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >, a data-driven visualization of music listening habits.
                     I’m driven by how people can shape visuals through the web,
                     using intuitive interfaces and
@@ -112,7 +130,8 @@
                         >libraries<img
                             src="images/projects/devolute.jpg"
                             alt=""
-                    /></a>
+                        /></a
+                    >
                     built on modern platforms like WebGPU and WebGL.
                 </p>
                 <p>
@@ -121,55 +140,69 @@
                     <a
                         href="https://www.instagram.com/p/C5ThB8drbLx"
                         class="project"
-                        >styling<img src="images/projects/styling.jpg" alt=""
-                    /></a>
+                        >styling<img
+                            src="images/projects/styling.jpg"
+                            alt=""
+                        /></a
+                    >
                     and
                     <a class="project"
                         >upcycling<img
                             src="images/projects/upcycling.jpg"
                             alt=""
-                    /></a>
+                        /></a
+                    >
                     projects, help build
                     <a
                         href="https://discord.com/invite/malefashionadvice"
                         class="project"
                         >online fashion communities<img
                             src="images/projects/mfad.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >, design and curate
                     <a
                         href="https://osu.ppy.sh/beatmapsets/1317683"
                         class="project"
                         >levels for rhythm games<img
                             src="images/projects/romanticist.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >, and host and perform in
                     <a class="project"
-                        >DJ/VJ shows<img src="images/projects/dj-vj.jpg" alt=""
-                    /></a>
-                    at WPI. These experiences inform how I design tools that
-                    balance precision, creativity, and aesthetic expression.
+                        >DJ/VJ shows<img
+                            src="images/projects/dj-vj.jpg"
+                            alt=""
+                        /></a
+                    >
+                    at WPI. These experiences inform how I design tools that balance
+                    precision, creativity, and aesthetic expression.
                 </p>
                 <p>
                     Beyond development, I enjoy studying
                     <a href="files/the-role-of-rail.pdf" class="project"
-                        >cities<img src="images/projects/inner-belt.jpg" alt=""
-                    /></a>
+                        >cities<img
+                            src="images/projects/inner-belt.jpg"
+                            alt=""
+                        /></a
+                    >
                     and
                     <a class="project"
                         >transportation<img
                             src="images/projects/transit.jpg"
                             alt=""
-                    /></a>
-                    systems, exploring how activism and design shape public
-                    infrastructure. I’ve also collaborated with nonprofits and
-                    community organizations on marketing and
+                        /></a
+                    >
+                    systems, exploring how activism and design shape public infrastructure.
+                    I’ve also collaborated with nonprofits and community organizations
+                    on marketing and
                     <a
                         href="files/building-positive-culture-change.pdf"
                         class="project"
                         >social science research<img
                             src="images/projects/social-science.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >.
                 </p>
                 <p>
@@ -179,42 +212,49 @@
                         >Mosaiq Software<img
                             src="images/projects/mosaiq.jpg"
                             alt=""
-                    /></a>
+                        /></a
+                    >
                     building
                     <a href="https://terrazzo.mosaiq.dev" class="project"
                         >platforms<img
                             src="images/projects/terrazzo.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >,
                     <a href="https://carddomain.mosaiq.dev" class="project"
                         >engines<img
                             src="images/projects/card-domain.jpg"
-                            alt="" /></a
+                            alt=""
+                        /></a
                     >, and tools, but I am always looking for full-time
                     opportunities.
                 </p>
                 <p>
                     Finally, I
                     <a class="project"
-                        >pour lattes<img src="images/projects/crust.jpg" alt=""
-                    /></a>
+                        >pour lattes<img
+                            src="images/projects/crust.jpg"
+                            alt=""
+                        /></a
+                    >
                     sometimes.
                 </p>
             </section>
             <section id="buttons">
                 <a href="https://samranda.com"
-                    ><img src="images/buttons/sam.webp" alt=""
-                /></a>
+                    ><img src="images/buttons/sam.webp" alt="" /></a
+                >
                 <a href="https://hayl.in"
-                    ><img src="images/buttons/haylin.webp" alt=""
-                /></a>
+                    ><img src="images/buttons/haylin.webp" alt="" /></a
+                >
                 <a href="https://giannirosato.com"
-                    ><img src="images/buttons/gb82_88x31.webp" alt=""
-                /></a>
+                    ><img src="images/buttons/gb82_88x31.webp" alt="" /></a
+                >
                 <a href="https://jordane.day/"
-                    ><img src="images/buttons/jordan.gif" alt=""
-                /></a>
+                    ><img src="images/buttons/jordan.gif" alt="" /></a
+                >
             </section>
+            <Footer />
         </div>
     </body>
 </html>

@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Ronzino";
+    src: url("/fonts/Ronzino-Regular.woff2") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    max-width: min(640px, 90%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.title {
+    h1 {
+        margin: 0;
+    }
+
+    .date {
+        font-family: "Ronzino";
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+article {
+    line-height: 1.5;
+
+    ul {
+        margin-left: 1em;
+    }
+
+    p,
+    li {
+        font-family: "Ronzino";
+        font-size: 18px;
+    }
+
+    li::marker {
+        content: "- ";
+        font-size: 18px;
+    }
+
+    p {
+        margin: 0.7em 0;
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 0.7em 0;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    code {
+        font-family: "Necto Mono";
+        background-color: #324f2f;
+        padding: 0 0.2rem;
+        border-radius: 0.2rem;
+    }
+
+    .astro-code {
+        * {
+            background-color: inherit;
+        }
+
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+    }
+
+    a {
+        color: var(--link);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+header {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    & > * {
+        color: var(--text);
+        font-size: 3em;
+        text-decoration: none;
+        font-style: italic;
+
+        @media (max-width: 600px) {
+            font-size: 2.5em;
+        }
+    }
+}
+
+main {
+    flex-grow: 1;
+}
+
+#previews {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    a {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        text-decoration: none;
+        color: var(--text);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-style: italic;
+        }
+    }
+}
