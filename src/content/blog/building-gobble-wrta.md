@@ -1,7 +1,7 @@
 ---
-title: 'Giving The Transit Weirdos What They Want'
+title: 'Giving the Transit Weirdos What They Want'
 description: "Synthesizing an unofficial GTFS Realtime feed for WRTA from a nonstandard transit information API, and why I think it's valuable to do so."
-pubDate: 'Jul 21 2026'
+pubDate: 'Jul 20 2026'
 heroImage: '../images/building-gobble-wrta/hero.jpg'
 ---
 
