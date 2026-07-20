@@ -5,8 +5,6 @@ pubDate: 'Mar 3 2026'
 heroImage: '../images/social-media-discoverability/hero.jpg'
 ---
 
-This is the first (mostly anecdotal) piece in a larger exploration of the future of social media platforms.
-
 From an insulated & isolated suburb, algorithmic social media turned me from an unconfident, angry kid into an aesthetically-engaged, witty, openly-gay man. As advocates for the classic, federated web push back on retention-based social media platforms, I worry for the kids growing up in my shoes. Contrasting with the time- and knowledge-intensive curation process required to effectively use platforms like Mastodon and curate rich RSS feeds, I believe the persistence of easy-to-use, algorithmic, exploratory feeds are crucial for identity formation. But, how do we build platforms that fill this role without compromising on data privacy or becoming a breeding ground for social comparison that erodes self-image?
 
 Much of my early- to mid-teens were spent on amateur hacking forums I was way too young for, playing competitive multiplayer games that made me so frustrated my parents could hear me yelling from downstairs. That anger and online delinquency wasn’t a cover for anything, I don’t think; I was treated well by my peers, lacked the internalized homophobia often present in boys my age (although I wasn’t quite ready to come out yet), and had a great relationship with my siblings and parents. I can confidently attribute it to spending energy in the wrong places for me, neglecting the creative and aesthetic engagement that I didn’t know I needed. 
